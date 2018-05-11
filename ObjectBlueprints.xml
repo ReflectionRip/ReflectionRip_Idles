@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Campfire" Inherits="Item">
+    <part Name="Render" Tile="Items/sw_campfire_noflame.png" DisplayName="campfire" RenderString="249" ColorString="&amp;R" DetailColor="w" Occluding="false"></part>
+    <part Name="Physics" Weight="0" Takeable="false" Solid="false"></part>
+    <part Name="AnimatedMaterialFire"></part>
+    <part Name="LightSource" Lit="true" Radius="3"></part>
+    <part Name="Description" Short="A brightly burning campfire."></part>
+    <part Name="UnityPrefabImposter" PrefabID="Prefabs/Particles/CampfireFlames"></part>
+    <part Name="rr_IdleCampfire"></part>
+    <intproperty Name="Inorganic" Value="1" />
+    <intproperty Name="NavigationWeight" Value="95" />
+    <tag Name="ForceSmartUse"></tag>
+  </object>
+  <object Name="JoppaCampfire" Inherits="Campfire">
+    <part Name="rr_IdleCampfire" owner="Joppa"></part>
+    <tag Name="IdleObject"></tag>
+  </object>
+  
+  <!-- Made the owned bedrolls furnature that cannot be taken. (more like full beds) -->
+  <object Name="OwnedBedroll" Inherits="Furniture">
+    <part Name="Render" DisplayName="bedroll" ColorString="&amp;w" RenderString="169" Occluding="false" RenderIfDark="true" Tile="Items/sw_bedroll.bmp" DetailColor="y"></part>
+    <part Name="Physics" Weight="400" Takeable="false" Solid="false"></part>
+    <part Name="Description" Short="This bed is warm and comfy."></part>
+    <part Name="rr_OwnedBedroll" owner="WatervineFarmer"></part>
+    <tag Name="IdleObject"></tag>
+  </object>
+  <object Name="BobsBedroll" Inherits="OwnedBedroll">
+    <part Name="Description" Short="The bed of Elder Irudad is the best bed in all of Joppa."></part>
+    <part Name="rr_OwnedBedroll" owner="ElderBob"></part>
+  </object>
+  <object Name="MehmetsBedroll" Inherits="OwnedBedroll">
+    <part Name="Description" Short="This bed is warm and comfy."></part>
+    <part Name="rr_OwnedBedroll" owner="Mehmet"></part>
+  </object>
+  <object Name="UalraigsBedroll" Inherits="OwnedBedroll">
+    <part Name="Description" Short="This bed is marked with the crest of the Fellowship of Wardens."></part>
+    <part Name="rr_OwnedBedroll" owner="Warden Ualraig"></part>
+  </object>
+  <object Name="GuardPost" Inherits="Widget">
+    <part Name="rr_GuardSpot" owner="WatervineFarmer"></part>
+    <tag Name="IdleObject"></tag>
+  </object>
+</objects>

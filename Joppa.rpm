@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Map Width="80" Height="25" Load="Merge">
+  <cell X="3" Y="4"><object Name="GuardPost"></object></cell>
+  <cell X="7" Y="5"><object Name="GuardPost"></object></cell>
+
+  <cell X="21" Y="4"><object Name="OwnedBedroll"></object></cell>
+  <cell X="21" Y="10"><object Name="OwnedBedroll"></object></cell>
+  <cell X="30" Y="11"><object Name="OwnedBedroll"></object></cell>
+  <cell X="45" Y="2"><object Name="BobsBedroll"></object></cell>
+  <cell X="45" Y="12"><object Name="UalraigsBedroll"></object></cell>
+  <cell X="43" Y="16"><object Name="JoppaCampfire"></object></cell>
+  
+  <cell X="47" Y="21"><object Name="GuardPost"></object></cell>
+  <cell X="54" Y="19"><object Name="GuardPost"></object></cell>
+  <cell X="54" Y="21"><object Name="GuardPost"></object></cell>
+
+  <cell X="57" Y="12"><object Name="MehmetsBedroll"></object></cell>
+
+  <cell X="62" Y="3"><object Name="GuardPost"></object></cell>
+
+  <cell X="64" Y="13"><object Name="OwnedBedroll"></object></cell>
+
+  <cell X="69" Y="7"><object Name="GuardPost"></object></cell>
+</Map>
