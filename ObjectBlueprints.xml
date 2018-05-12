@@ -22,8 +22,11 @@
     <part Name="Render" DisplayName="bedroll" ColorString="&amp;w" RenderString="169" Occluding="false" RenderIfDark="true" Tile="Items/sw_bedroll.bmp" DetailColor="y"></part>
     <part Name="Physics" Weight="400" Takeable="false" Solid="false"></part>
     <part Name="Description" Short="This bed is warm and comfy."></part>
-    <part Name="rr_OwnedBedroll" owner="WatervineFarmer"></part>
+    <part Name="rr_OwnedBedroll"></part>
     <tag Name="IdleObject"></tag>
+  </object>
+  <object Name="WatervineFarmerBedroll" Inherits="OwnedBedroll">
+    <part Name="rr_OwnedBedroll" owner="WatervineFarmer"></part>
   </object>
   <object Name="BobsBedroll" Inherits="OwnedBedroll">
     <part Name="Description" Short="The bed of Elder Irudad is the best bed in all of Joppa."></part>
@@ -39,6 +42,14 @@
   </object>
   <object Name="GuardPost" Inherits="Widget">
     <part Name="rr_GuardSpot" owner="WatervineFarmer"></part>
+    <tag Name="IdleObject"></tag>
+  </object>
+  <object Name="BobsPost" Inherits="Widget">
+    <part Name="rr_GuardSpot" startTime ="451" endTime="1051" owner="ElderBob"></part>
+    <tag Name="IdleObject"></tag>
+  </object>
+  <object Name="ArgyveStore" Inherits="Widget">
+    <part Name="rr_GuardSpot" startTime ="576" endTime="1051" owner="Argyve"></part>
     <tag Name="IdleObject"></tag>
   </object>
 </objects>

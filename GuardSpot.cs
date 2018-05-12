@@ -13,6 +13,9 @@ namespace XRL.World.Parts
         public bool debug = false;
         public int minTurns = 100;
         public int maxTurns = 200;
+        // There are 50 turns per hour, 1200 turns per day.
+        public int startTime = 0;
+        public int endTime = 1200;
         private long guardStart = 0;
         private int guardTurns = 0;
 
@@ -35,8 +38,12 @@ namespace XRL.World.Parts
         {
             if (E.ID == "IdleQuery")
             {
+                // Continue guarding; Don't restart this idle if still active.
+                if (currentTurn <= (guardStart + guardTurns)) return false;
+
                 GameObject GO = E.GetParameter<GameObject>("Object");
 
+                // Anyone can use unowned guard spots.
                 if (owner != string.Empty)
                 {
                     bool result = false;
@@ -54,7 +61,23 @@ namespace XRL.World.Parts
                     if (result == false) return result;
                 }
 
-                if (currentTurn <= (guardStart + guardTurns)) return false;
+                // Make sure the time range is within the valid 1200 turns.
+                startTime = startTime % 1200;
+                endTime = endTime % 1200;
+
+                // Check if the time is correct; IE/ for only day jobs or night jobs.
+                if (startTime != endTime)
+                {
+                    // Make sure the end time is always after the start time.
+                    if (endTime < startTime) endTime += 1200;
+
+                    // Get the current time, and advance it by 1 day if it is before the start time.
+                    int minute = (int)(Calendar.TotalTimeTicks % 1200);
+                    if (minute < startTime) minute += 1200;
+
+                    // If the current time is past the end time don't do this idle.
+                    if (minute > endTime) return false;
+                }
 
                 // Debugging
                 if (debug)

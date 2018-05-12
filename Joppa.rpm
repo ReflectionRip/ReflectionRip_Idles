@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Map Width="80" Height="25" Load="Merge">
-  <cell X="3" Y="4"><object Name="GuardPost"></object></cell>
-  <cell X="7" Y="5"><object Name="GuardPost"></object></cell>
+  <cell X="3" Y="4"><object Name="JoppaGuardPost"></object></cell>
+  <cell X="5" Y="8"><object Name="JoppaGuardPost"></object></cell>
+  <cell X="6" Y="20"><object Name="ArgyveStore"></object></cell>
+  <cell X="7" Y="5"><object Name="JoppaGuardPost"></object></cell>
 
-  <cell X="21" Y="4"><object Name="OwnedBedroll"></object></cell>
-  <cell X="21" Y="10"><object Name="OwnedBedroll"></object></cell>
-  <cell X="30" Y="11"><object Name="OwnedBedroll"></object></cell>
+  <cell X="21" Y="4"><object Name="WatervineFarmerBedroll"></object></cell>
+  <cell X="21" Y="10"><object Name="WatervineFarmerBedroll"></object></cell>
+  <cell X="30" Y="11"><object Name="WatervineFarmerBedroll"></object></cell>
+
+  <cell X="31" Y="4"><object Name="BobsPost"></object></cell>
+  <cell X="36" Y="8"><object Name="JoppaGuardPost"></object></cell>
+  <cell X="38" Y="3"><object Name="BobsPost"></object></cell>
+
+  <cell X="43" Y="16"><object Name="JoppaCampfire"></object></cell>
   <cell X="45" Y="2"><object Name="BobsBedroll"></object></cell>
   <cell X="45" Y="12"><object Name="UalraigsBedroll"></object></cell>
-  <cell X="43" Y="16"><object Name="JoppaCampfire"></object></cell>
-  
-  <cell X="47" Y="21"><object Name="GuardPost"></object></cell>
-  <cell X="54" Y="19"><object Name="GuardPost"></object></cell>
-  <cell X="54" Y="21"><object Name="GuardPost"></object></cell>
+
+  <cell X="47" Y="21"><object Name="JoppaGuardPost"></object></cell>
+  <cell X="49" Y="19"><object Name="JoppaGuardPost"></object></cell>
+  <cell X="54" Y="21"><object Name="JoppaGuardPost"></object></cell>
+  <cell X="55" Y="18"><object Name="JoppaGuardPost"></object></cell>
 
   <cell X="57" Y="12"><object Name="MehmetsBedroll"></object></cell>
 
-  <cell X="62" Y="3"><object Name="GuardPost"></object></cell>
+  <cell X="62" Y="3"><object Name="JoppaGuardPost"></object></cell>
 
-  <cell X="64" Y="13"><object Name="OwnedBedroll"></object></cell>
+  <cell X="64" Y="13"><object Name="WatervineFarmerBedroll"></object></cell>
 
-  <cell X="69" Y="7"><object Name="GuardPost"></object></cell>
+  <cell X="69" Y="1"><object Name="JoppaGuardPost"></object></cell>
+  <cell X="69" Y="7"><object Name="JoppaGuardPost"></object></cell>
 </Map>
