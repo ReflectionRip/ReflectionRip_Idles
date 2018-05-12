@@ -40,7 +40,7 @@
     <part Name="Description" Short="This bed is marked with the crest of the Fellowship of Wardens."></part>
     <part Name="rr_OwnedBedroll" owner="Warden Ualraig"></part>
   </object>
-  <object Name="GuardPost" Inherits="Widget">
+  <object Name="JoppaGuardPost" Inherits="Widget">
     <part Name="rr_GuardSpot" owner="WatervineFarmer"></part>
     <tag Name="IdleObject"></tag>
   </object>

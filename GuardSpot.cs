@@ -38,10 +38,10 @@ namespace XRL.World.Parts
         {
             if (E.ID == "IdleQuery")
             {
+                GameObject GO = E.GetParameter<GameObject>("Object");
+
                 // Continue guarding; Don't restart this idle if still active.
                 if (currentTurn <= (guardStart + guardTurns)) return false;
-
-                GameObject GO = E.GetParameter<GameObject>("Object");
 
                 // Anyone can use unowned guard spots.
                 if (owner != string.Empty)
@@ -79,16 +79,19 @@ namespace XRL.World.Parts
                     if (minute > endTime) return false;
                 }
 
+                // Guard from 2 to 4 hours. (Default)
+                guardStart = currentTurn;
+                guardTurns = Stat.Random(minTurns, maxTurns);
+
                 // Debugging
                 if (debug)
                 {
                     string message = GO.DisplayName + " starts guarding!";
                     MessageQueue.AddPlayerMessage(message);
+                    message = "Turns: " + minTurns + "-" + maxTurns;
+                    if (startTime != endTime) message += " Time: " + startTime + "-" + (endTime % 1200);
+                    MessageQueue.AddPlayerMessage(message);
                 }
-
-                // Guard from 2 to 4 hours. (Default)
-                guardStart = currentTurn;
-                guardTurns = Stat.Random(minTurns, maxTurns);
 
                 // Move to the guard spot; Up to a range of 1 spot around the post.
                 GO.pBrain.PushGoal((GoalHandler)new AI.GoalHandlers.rr_MoveNearTo(ParentObject, 1, false));
